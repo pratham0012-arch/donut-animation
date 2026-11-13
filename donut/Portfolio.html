@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-light: #64748b;
+        }
+
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #home h1 span {
+            color: var(--primary-color);
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Generic Section Styling */
+        section {
+            padding: 5rem 5%;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-main);
+        }
+
+        /* Projects Section */
+        #projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--bg-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .project-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-main);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Add a hamburger menu here for a real site */
+            }
+            #home h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home" class="logo">Barks</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Hi, I'm <span>Pratham Verma</span></h1>
+        <p>I am a creative professional specializing in building digital experiences. Welcome to my personal portfolio.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A brief description of this project. Explain what you built, the tools you used, and the problem it solved.</p>
+                <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Read More &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>A brief description of this project. Explain what you built, the tools you used, and the problem it solved.</p>
+                <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Read More &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>A brief description of this project. Explain what you built, the tools you used, and the problem it solved.</p>
+                <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Read More &rarr;</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I'm currently open to new opportunities and collaborations. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        <a href="mailto:prathamverma920@gmail.com" class="btn">Say Hello</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pratham Verma. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
